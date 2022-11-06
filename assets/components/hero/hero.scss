@@ -1,0 +1,60 @@
+@import '../base/_variables.scss';
+
+$component: 'hero';
+
+.#{$component} {
+  position: relative;
+  background-color: rgba(38, 32, 77, 1);
+  background-image: url('../../image/background.jpeg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 500px;
+    background: linear-gradient(0deg, rgba(38, 32, 77, 1) 0%, rgba(38, 32, 77, 0) 100%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 7;
+  }
+
+  &__headline {
+    display: block;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 80px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 90px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 120px;
+    }
+  }
+
+  &__subline {
+    text-transform: uppercase;
+    font-size: 16px;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 24px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 28px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../base/_variables.scss';
+
+$component: 'info';
+
+.#{$component} {
+  &__entries {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  &__entry {
+    display: flex;
+    flex: 1 0 100%;
+    gap: var(--spacing-2);
+    flex-direction: column;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    padding: var(--spacing-2);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    flex: 0 0 150px;
+
+    @media (min-width: $breakpoint-md) {
+      flex: 0 0 250px;
+    }
+  }
+
+  &__description {
+    flex-grow: 1;
+    padding-top: 5px;
+  }
+
+  &__description-name {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+
+  &__description-label {
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  &__description-year {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__description-text {
+  }
+}

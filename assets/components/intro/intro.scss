@@ -1,0 +1,35 @@
+@import '../base/_variables.scss';
+
+$component: 'intro';
+
+.#{$component} {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+
+    @media (min-width: $breakpoint-lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    align-self: flex-end;
+    margin-bottom: var(--spacing-2);
+    
+    @media (min-width: $breakpoint-sm) {
+      width: unset;
+      height: 350px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      height: unset;
+      margin-bottom: unset;
+    }
+
+    img {
+      border-radius: var(--border-radius);
+    }
+  }
+}
