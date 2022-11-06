@@ -28,6 +28,7 @@ $component: 'info';
     align-items: center;
     height: 150px;
     flex: 0 0 150px;
+    background-color: var(--color-white);
 
     @media (min-width: $breakpoint-md) {
       flex: 0 0 250px;
